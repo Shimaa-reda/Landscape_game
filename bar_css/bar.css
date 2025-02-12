@@ -87,9 +87,12 @@ body {
     color: gray;
 }
 .slider {
-    width: 100%;
+    width: 65%;
     accent-color: #F08886;
     margin-bottom: 30px;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
 }
 
 /* Progress Icons */
