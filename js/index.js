@@ -129,19 +129,7 @@ const questions = [
         reference:["References: 1. Use of Palivizumab Prophylaxis to Prevent Hospitalization From Severe Respiratory Syncytial Virus Infection During the 2022-2023 RSV Season. American Academy of Pediatrics. 2022. Available at: https://www.aap.org/en/pages/2019-novel-coronavirus-covid-19-infections/clinical-guidance/interim-guidance-for-use-of-palivizumab-prophylaxis-to-prevent-hospitalization/  Accessed February 2025"]
 
     }
-    ,
-    { 
-        question: "What is the RSV Hospitalisation rate per 1000 children in 33-35 wGA infants?", 
-        answer: [179],
-        min1: 0, 
-        max1: 100,
-        // image: "./images/q6.png",
-        image_que:"./images/Frame4.svg",
-        type: "circles",
-        color1: "#F08886",  
-        reference:["Reference: 1. Boyce TG, et al. J Pediatr. 2000;137(6):865-70."]
-
-    }
+    
     ,
     { 
         question: "What is the RSV Hospitalisation rate per 1000 children in 33-35 wGA infants?", 
@@ -453,17 +441,20 @@ document.getElementById('submit').addEventListener('click', function() {
         isCorrect = userAnswer1 === correctAnswer1; // Exact match for max 10
     }
 
-    let correctAnswerText = `Correct answer: ${correctAnswer1}`;
-    if (currentQuestionIndex === 1 ||currentQuestionIndex === 2) {
-        correctAnswerText += " Days";
-    }
-    else if (currentQuestionIndex === 6) {
-        correctAnswerText += " children";
-    }
-    else if (currentQuestion.max1 === 100) {
-        correctAnswerText += "%";
-    }
-   
+    // Function to add appropriate unit based on question index first, then min/max values
+    const addUnit = (value, questionIndex, min, max) => {
+        if (questionIndex === 1 || questionIndex === 2) {
+            return `${value} Days`;
+        } else if (questionIndex === 6) {
+            return `${value} children`;
+        } else if (min === 0 && max === 100) {
+            return `${value}%`;
+        }
+        return `${value}`;
+    };
+
+    // Build the correct answer text
+    let correctAnswerText = `Correct answer: ${addUnit(correctAnswer1, currentQuestionIndex, currentQuestion.min1, currentQuestion.max1)}`;
 
     // Check additional answers if they exist
     if (currentQuestion.answer.length > 1) {
@@ -473,14 +464,11 @@ document.getElementById('submit').addEventListener('click', function() {
         if (currentQuestion.max2 !== 10) {
             isCorrect = isCorrect && Math.abs(userAnswer2 - correctAnswer2) <= 5;
         } else {
-            isCorrect = isCorrect && userAnswer2 === correctAnswer2; // Exact match for max 10
+            isCorrect = isCorrect && userAnswer2 === correctAnswer2;
         }
-        correctAnswerText += ` & ${correctAnswer2}`;
-        if (currentQuestion.max2 === 100) {
-            correctAnswerText += "%";
-        }
+        correctAnswerText += ` & ${addUnit(correctAnswer2, currentQuestionIndex, currentQuestion.min2, currentQuestion.max2)}`;
     }
-    
+
     if (currentQuestion.answer.length > 2) {
         const userAnswer3 = parseFloat(document.getElementById('range3').value);
         const correctAnswer3 = currentQuestion.answer[2];
@@ -488,23 +476,17 @@ document.getElementById('submit').addEventListener('click', function() {
         if (currentQuestion.max3 !== 10) {
             isCorrect = isCorrect && Math.abs(userAnswer3 - correctAnswer3) <= 5;
         } else {
-            isCorrect = isCorrect && userAnswer3 === correctAnswer3; // Exact match for max 10
+            isCorrect = isCorrect && userAnswer3 === correctAnswer3;
         }
-        correctAnswerText += ` & ${correctAnswer3}`;
-        if (currentQuestion.max3 === 100) {
-            correctAnswerText += "%";
-        }
+        correctAnswerText += ` & ${addUnit(correctAnswer3, currentQuestionIndex, currentQuestion.min3, currentQuestion.max3)}`;
     }
-    document.getElementById('modal-text').innerHTML = isCorrect 
+
+    document.getElementById('modal-text').innerHTML = isCorrect
         ? '<span style="color: #49A942; font-weight:bold">Correct answer!</span> '
         : '<span style="color: red; font-weight:bold">Oh!</span><br><br>' +
-          `<span style="color: green;">${currentQuestionIndex === 0 ? correctAnswerText + " Days" : correctAnswerText}</span>`;
+          `<span style="color: green;">${correctAnswerText}</span>`;
 
     document.getElementById('modal-img').src = isCorrect ? "./images/like.png" : "./images/sad.png";
-
-    // Display references if available
-    // const referenceText = currentQuestion.reference.join('<br>');
-    // document.getElementById('ref').innerHTML = referenceText;
 
     if (currentQuestion.image) {
         document.getElementById("modal-img2").src = currentQuestion.image;
