@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Home</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Exo 2", serif;
+            background: url('./images/background_image.png') no-repeat center center/100% 100%;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            color: white;
+           
+        }
+        a{
+            text-decoration: none;
+        }
+
+        @font-face {
+            font-family: "questions";
+            src: url("../fonts/NewsGothicStd-Bold.otf");
+        }
+
+        @font-face {
+            font-family: "note";
+            src: url("../fonts/NewsGothicStd.otf");
+            font-weight: 700;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 400px;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #4dc0b5;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: whitesmoke;
+            color: rgb(36, 36, 90);
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .logo-top-right {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            width: 197px;
+            height: 80px;
+        }
+
+        .logo-bottom-right {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            width: 300px;
+            height: 74px;
+        }
+
+        .text-bottom-left {
+            font-size: 14px;
+            position: absolute;
+            left: 30px;
+            bottom: 10px;
+           
+            padding-right: 30px;
+            font-weight: 300;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            max-width: 80%;
+        }
+        .left_top{
+            border-right: 1px solid white;
+        }
+       
+
+        .left_top, .right {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .letters {
+            width: 600px;
+            
+        }
+
+        @media (max-width: 768px) {
+            .text-bottom-left {
+                flex-direction: column;
+                gap: 20px;
+                max-width: 90%;
+                padding-right: 0;
+            }
+
+            .logo-top-right {
+                width: 150px;
+                height: auto;
+            }
+
+            .logo-bottom-right {
+                width: 250px;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="./images/top_logo.png" class="logo-top-right" alt="Top Right Logo">
+    <div class="container">
+        <img src="./images/letters.png" alt="" class="letters">
+        <a href="index.html" class="btn">restart</a>
+    </div>
+
+    <div class="text-bottom-left">
+        <div class="left_top">
+            <b>For Reporting Adverse Events and/or Product Quality Complaints:</b><br>
+            Website: <a href="https://contactazmedical.astrazeneca.com" style="color: white;">https://contactazmedical.astrazeneca.com</a> <br>
+            Email: <a href="mailto:Patientsafety-azgulf@astrazeneca.com" style="color: white;">Patientsafety-azgulf@astrazeneca.com</a> <br>
+            Call AstraZeneca FZ LLC landline: +97143624888 <br><br>
+            For Medical Information Enquiries: <br>
+            Website: <a href="https://contactazmedical.astrazeneca.com" style="color: white;">https://contactazmedical.astrazeneca.com</a> <br>
+            Email: <a href="mailto:gulf-medicalinfo@astrazeneca.com" style="color: white;">gulf-medicalinfo@astrazeneca.com</a> <br>
+            Call AstraZeneca FZ LLC landline: +97143624888
+        </div>
+
+        <div class="right">
+            AstraZeneca Dubai Science Park, Tower South, <br> Floor 1706 S, Dubai, UAE <br>
+            Tel: +971 4 362 4888
+        </div>
+    </div>
+
+    <img src="./images/bottom_logo.png" class="logo-bottom-right" alt="Bottom Right Logo">
+</body>
+</html>

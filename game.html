@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landscape</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./bar_css/bar.css" />
+    <link rel="stylesheet" href="./bar_css/all.min.css" />
+    <style></style>
+</head>
+<body>
+    <div class="logo1">
+        <img src="./images/top_logo.png" alt="Lilly" class="top_logo" />
+    </div>
+    <div class="container_que">
+        <div class="question" id="question"></div>
+        <div class="slider-container">
+            <div class="progress-icons">
+                <div id="startLabel">Start</div>
+                <div class="slider-value" id="sliderValue1"></div>
+                <div id="endLabel">End</div>
+            </div>
+            <div id="title1" class="slider-title"></div>
+            <div id="label1" class="slider-label"></div>
+            <input type="range" class="slider" id="range1" />
+        </div>
+
+        <div class="slider-container" id="secondSliderContainer" style="display: none">
+            <div class="progress-icons">
+                <div id="startLabel2">Start</div>
+                <div class="slider-value" id="sliderValue2"></div>
+                <div id="endLabel2">End</div>
+            </div>
+            <div id="title2" class="slider-title"></div>
+            <div id="label2" class="slider-label"></div>
+            <input type="range" class="slider" id="range2" />
+        </div>
+
+        <div class="slider-container" id="thirdSliderContainer" style="display: none;">
+          <div class="progress-icons">
+              <div id="startLabel3">Start</div>
+              <div class="slider-value" id="sliderValue3"></div>
+              <div id="endLabel3">End</div>
+          </div>
+          <div id="title3" class="slider-title"></div>
+          <div id="label3" class="slider-label"></div>
+          <input type="range" class="slider" id="range3" />
+      </div>
+      
+
+        <div class="note" style="display: none;" id="note" style="font-size: 20px; font-weight: 200;"></div>
+        <button class="submit-btn" id="submit">Submit answer</button>
+
+        <div class="center-image" id="questionImageContainer" style="display: none;">
+            <img id="questionImage" src="" alt="Question Image" style="width: auto; height: 150px;" />
+        </div>
+    </div>
+    <!-- Placeholder for the question image -->
+
+
+
+    <!-- Reference section -->
+<div id="references" class="references" style=""></div>
+
+
+    <div class="bottom_logo">
+        <img src="./images/bottom_logo.png" alt="Lilly" class="bottom_logo" />
+    </div>
+
+    <div class="modal" id="modal">
+        <img id="modal-img2" src="" alt="Extra Image" style="display: none" />
+        <!-- <p class="ref" id="ref"></p> -->
+        <img id="modal-img" src="" alt="Feedback" />
+        <p id="modal-text"></p>
+        <button id="modal-btn" onclick="closeModal()">Continue</button>
+    </div>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>

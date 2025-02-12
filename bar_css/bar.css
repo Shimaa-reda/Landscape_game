@@ -1,0 +1,258 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Exo 2", serif;
+    text-align: center;
+    height: 100vh;
+   /* display: flex; */
+    background:  url('../images/background_image.png') no-repeat center center/100% 100%;
+    overflow: hidden;
+
+}
+
+.note{
+    font-family: "note";
+}
+.container_que{
+  
+    /* width: 38%; */
+    width: 60%;
+    max-width: 550px;
+    margin: auto;
+    /* margin-top: 30px; */
+  
+  
+    position: relative;
+   
+}
+@media screen and (orientation: portrait) {
+    .container_que {
+        top: 25%;
+        width: 55%;
+    }
+}
+/* Top Logo (Now inside .container) */
+.logo1 {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.top_logo {
+    width: 100px;
+}
+
+/* Question Box */
+.question {
+    font-size: 25px;
+    margin: 10px 0;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    font-weight: 300;
+    /* margin-top: 90px; */
+    /* margin-top: 40px; */
+    line-height: 1.5;
+   
+    color: #fff;
+
+}
+
+/* Slider Container */
+.slider-container {
+    width: 100%;
+    position: relative;
+   
+    display: inline-block;
+}
+.slider-value {
+    position: absolute;
+    top: -10px; 
+    transform: translateX(-50%);
+    font-size: 14px;
+    font-weight: bold;
+    color: gray;
+    
+}
+
+.slider-value2{
+    bottom: 80px;
+    position: absolute;
+   
+    font-size: 18px;
+    transform: translateX(-50%);
+    color: gray;
+}
+.slider {
+    width: 100%;
+    accent-color: #F08886;
+    margin-bottom: 30px;
+}
+
+/* Progress Icons */
+.progress-icons {
+    display: flex;
+    justify-content: space-between;
+    padding: 28px 0;
+}
+
+.progress-icons .slider-value,#endLabel ,#startLabel , #endLabel2 ,#startLabel2, #endLabel3 ,#startLabel3{
+    height: auto;
+    /* background-color: #7F7F7F; */
+    background: rgba(255, 255, 255, 0.33);
+
+    padding: 5px;
+    border-radius: 17px;
+    /* color: white; */
+    width: 80px;
+    color: #fff;
+    font-weight: bold;
+
+}
+/* .progress-icons .slider-value{
+    width: 70px;
+    background-color: rgba(127, 127, 127, 0.33);
+    padding: 8px;
+    border-radius: 17px;
+    color: rgb(66 66 66 / 77%);
+    font-weight: bold;
+
+} */
+/* Icons */
+.icon-person, .icon-person2 ,.icon-person3{
+    font-size: 28px;
+    color: white;
+    
+}
+
+.icon-person.active, .icon-person2.active ,.icon-person3.active {
+    color: #49A942;
+}
+
+/* Submit Button */
+.submit-btn {
+    background-color: #fff;
+    color: #002A69;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+
+}
+.logo-top-right {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 197px;
+    height: 80px;
+}
+.logo-bottom-right {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    width: 300px;
+    height: 74px;
+}
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    border-radius: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px 20px;
+    box-shadow: 0px 0px 10px gray;
+    text-align: center;
+    max-width: 35%;
+}
+
+#modal-btn {
+    background-color: #49A942;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    color: white;
+    font-weight: bold;
+}
+
+#modal-img {
+    width: 50px;
+    margin-top: 20px;
+}
+
+.modal.correct {
+    color: #49A942;
+    font-weight: bold;
+}
+
+.modal.incorrect {
+    color: red;
+    font-weight: bold;
+}
+
+/* Bottom Logo */
+.bottom_logo {
+    width: 300px;
+   
+position: absolute;
+right: 10px;
+bottom: 10px;
+}
+#modal-img2{
+   
+    width:60%;
+    margin: auto;
+}
+
+.slider-container {
+    position: relative; /* Allows positioning of child elements */
+    margin: 20px 0; /* Add some spacing */
+}
+
+.slider-label {
+    position: relative; /* Position absolute to place it correctly */
+    top: -25px;
+    transform: translateY(-50%); /* Adjust for vertical alignment */
+   color: #49A942;
+   font-weight: bold;
+}
+
+
+.slider-title {
+    position: absolute; /* Position absolute to place it correctly */
+    left: 40%;
+    top: 0;
+    transform: translateY(-50%); /* Adjust for vertical alignment */
+    color: #49A942;
+    /* justify-content: center; */
+}
+
+
+.fa-circle {
+    font-size: 16px; /* Adjust the size as needed */
+    margin-right: 7px;
+}
+
+
+
+.references {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    padding: 10px;
+    font-size: 15px;
+    font-family: "Exo 2", serif;
+    width: 900px;
+    text-align: start;
+}
+
