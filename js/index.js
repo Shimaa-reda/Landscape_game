@@ -193,9 +193,13 @@ function loadQuestion() {
     // Set the question text
     document.getElementById('question').textContent = currentQuestion.question + (superscripts[currentQuestionIndex] || '');
 
-    // Update the references section
+    // Update the references section with clickable links
     const references = document.getElementById('references');
-    references.innerHTML = currentQuestion.reference.join('<br>');
+    references.innerHTML = currentQuestion.reference.map(ref => {
+        // Regular expression to find URLs in the reference text
+        const urlRegex = /(https?:\/\/[^\s]+)/g;
+        return ref.replace(urlRegex, url => `<a href="${url}" target="_blank" style="color: #fff; text-decoration: underline;">${url}</a>`);
+    }).join('<br>');
 
     // Set up the first slider
     const range1 = document.getElementById('range1');
@@ -301,6 +305,22 @@ function loadQuestion() {
         questionImageContainer.style.display = 'none'; // Hide if no image
     }
 }
+
+// Add this CSS to your existing styles
+const styleSheet = document.createElement("style");
+styleSheet.textContent = `
+    #references a {
+        color: #fff;
+        text-decoration: underline;
+        cursor: pointer;
+        transition: opacity 0.2s;
+    }
+    
+    #references a:hover {
+        opacity: 0.8;
+    }
+`;
+document.head.appendChild(styleSheet);
 
 function generateIcons(type, iconClass, containerSelector) {
     const container = document.querySelector(containerSelector);
