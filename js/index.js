@@ -126,7 +126,7 @@ const questions = [
         image_que:"./images/Frame4.svg",
         type: "circles",
         color1: "#F08886",  
-        reference:["References: 1. Use of Palivizumab Prophylaxis to Prevent Hospitalization From Severe Respiratory Syncytial Virus Infection During the 2022-2023 RSV Season. American Academy of Pediatrics. 2022. Available at: https://www.aap.org/en/pages/2019-novel-coronavirus-covid-19-infections/clinical-guidance/interim-guidance-for-use-of-palivizumab-prophylaxis-to-prevent-hospitalization/  Accessed February 2025"]
+        reference:["Reference: 1. Use of Palivizumab Prophylaxis to Prevent Hospitalization From Severe Respiratory Syncytial Virus Infection During the 2022-2023 RSV Season. American Academy of Pediatrics. 2022. Available at: https://www.aap.org/en/pages/2019-novel-coronavirus-covid-19-infections/clinical-guidance/interim-guidance-for-use-of-palivizumab-prophylaxis-to-prevent-hospitalization/  Accessed February 2025"]
 
     }
     
@@ -170,7 +170,7 @@ const questions = [
     }
     ,
     { 
-        question: "In a retrospective descriptive study conducted in KSA measuring the compliance of Synagis in children (<2 years)with CHD for the prevention of severe RSV infection, What was the average compliance rate?", 
+        question: "In a retrospective descriptive study conducted in KSA measuring the compliance of Synagis in children (<2 years) with CHD for the prevention of severe RSV infection, What was the average compliance rate?", 
         answer: [97],
         min1: 0, 
         max1: 100,
