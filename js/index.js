@@ -8,7 +8,7 @@ const questions = [
         max1: 100,
         // max2: 120,
         image: "./images/q1.png",
-        // image_que:"./images/image1.png",
+        image_que:"./images/Frame0.svg",
         // label1: "50% improvement",
         // label2: "100% improvement",
 
