@@ -36,7 +36,7 @@ const questions = [
     },
     { 
         question: "In The Impact-RSV study, monthly immunoprophylaxis with SYNAGIS for a total of 5 doses successfully reduced days on increased supplemental oxygen vs placebo to…", 
-        answer: [33.3],
+        answer: [30.3],
         min1: 0,
         max1: 100,
         // min2: 0,
